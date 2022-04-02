@@ -19,9 +19,23 @@ namespace ConsoleApplication
         /// </summary>
         public static void Main()
         {
-            var train = new Train();
-            train.StartEngines();
-            Console.WriteLine("Hello World!");
+            CrearTrenes();
+            CompararTrenecitos();
+        }
+
+        public static void CrearTrenes() {
+            for(int i = 0; i < 10000000; i++ ){
+                Train tren = new Train("1");
+            }
+        }
+
+        public static void CompararTrenecitos(){
+            Train t1 = new Train("Last Train To London");
+            Train t2 = new Train("Last Train To London");
+            Train t3 = new Train("Runaway Train");
+            Console.WriteLine(t1 == t2);
+            Console.WriteLine(t2 == t3);
+
         }
     }
 }
